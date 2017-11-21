@@ -1,17 +1,21 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
-import { LayoutComponent } from './layout/layout.component';
-import { HomeComponent } from './home/home.component';
-import { NotFoundComponent } from './not-found/not-found.component';
+import { DefaultLayoutComponent } from './containers';
 
 const routes: Routes = [
   {
     path: '',
-    component: LayoutComponent,
+    redirectTo: 'home',
+    pathMatch: 'full',
+  },
+  {
+    path: '',
+    component: DefaultLayoutComponent,
     children: [
-      { path: '', component: HomeComponent },
-      { path: '**', component: NotFoundComponent }
+      {
+        path: 'home',
+        loadChildren: './views/home/home.module#HomeModule'
+      }
     ]
   }
 ];

@@ -1,0 +1,44 @@
+.banner {
+  background-image: url('../assets/cover/cmu.jpg');
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+
+  &::after {
+    content: '';
+    background-color: rgba(black, .5);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+  }
+  
+  &.full {
+    background-position: center 69%;
+    padding-top: 26.32%;
+  }
+
+  &.less {
+    background-position: center 74%;
+    padding-top: 12.7%;
+  }
+
+  .banner-inner {
+    color: white;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+
+    h2,h3,h4 {
+      font-family: "Kanit", sans-serif;
+    }
+    h4 {
+      font-weight: 200;
+    }
+  }
+}

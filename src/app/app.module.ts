@@ -1,23 +1,34 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+// App routing and component
 import { AppRoutingModule } from './app-routing.module';
-
 import { AppComponent } from './app.component';
-import { LayoutComponent } from './layout/layout.component';
-import { HomeComponent } from './home/home.component';
-import { NotFoundComponent } from './not-found/not-found.component';
+
+// App structor concept from Concept from https://github.com/mrholek/CoreUI-Angular
+// Set app containers
+import { DefaultLayoutComponent } from './containers';
+const APP_CONTAINERS = [DefaultLayoutComponent];
+
+// Set app components
+import { FooterComponent, HeaderComponent } from './components';
+const APP_COMPONENTS = [FooterComponent, HeaderComponent];
+
+// Import 3rd party components
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { BannerComponent } from './components/banner/banner.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LayoutComponent,
-    HomeComponent,
-    NotFoundComponent
+    ...APP_CONTAINERS,
+    ...APP_COMPONENTS,
+    BannerComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BsDropdownModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
