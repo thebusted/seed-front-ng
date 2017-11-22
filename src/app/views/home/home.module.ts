@@ -12,7 +12,5 @@ import { HomeComponent } from './home.component';
   declarations: [HomeComponent]
 })
 export class HomeModule {
-  constructor() {
-    console.log(`I'M IN HOMEMODULE`);
-  }
+  constructor() { }
 }

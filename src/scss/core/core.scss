@@ -1,6 +1,6 @@
 // Import core styles
 @import "variables";
-// @import "mixins";
+@import "mixins";
 
 // Additional typography
 @import "typography";
@@ -25,6 +25,7 @@
 @import "header";
 // @import "input-group";
 // @import "loading";
+@import "lines";
 // @import "modal";
 // @import "nav";
 @import "navbar";

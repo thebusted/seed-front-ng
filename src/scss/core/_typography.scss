@@ -1,6 +1,8 @@
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+
+  font-size: 14px;
 }
 
 .font-xs {
@@ -33,4 +35,17 @@ body {
 
 .font-5xl {
   font-size: 2.5rem !important;
+}
+
+.title {
+  color: $purple-900;
+  font-family: "Kanit", sans-serif;
+  font-size: 2.25rem;
+
+  small {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 200;
+    margin: 5px 0;
+  }
 }

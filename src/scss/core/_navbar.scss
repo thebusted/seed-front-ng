@@ -1,12 +1,48 @@
 .navbar {
-  height: $navbar-height;
+  padding-bottom: 0;
+  padding-top: 0; // Fixed navbar
+  background-color: $purple-900;
 }
 
 .navbar-brand {
+  background-image: url('../assets/img/microchip.png');
+  background-position: left center;
+  background-repeat: no-repeat;
+  color: white;
   font-size: 1.8rem;
   font-weight: 500;
+  height: $navbar-height;
+  line-height: $navbar-height;
+  padding: 0 0 0 50px;
+  &:hover,
+  &:focus,
+  &:active {
+    color: white;
+  }
+}
+
+.nav-item {
+  display: flex;
+  border-bottom-color: transparent;
+  border-bottom-style: solid;
+  border-bottom-width: $navbar-border-size;
+  &.active {
+    border-bottom-color: white;
+  }
 }
 
 .nav-link {
+  color: white;
   font-family: "Kanit", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: calc(#{$navbar-height} - #{$navbar-border-size});
+  padding: 0;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  &:hover,
+  &:focus,
+  &:active {
+    color: white;
+  }
 }

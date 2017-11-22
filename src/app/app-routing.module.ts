@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { DefaultLayoutComponent } from './containers';
+import { DefaultLayoutComponent, NotfoundLayoutComponent } from './containers';
 
 const routes: Routes = [
   {
@@ -15,8 +15,20 @@ const routes: Routes = [
       {
         path: 'home',
         loadChildren: './views/home/home.module#HomeModule'
+      },
+      {
+        path: 'schedule',
+        loadChildren: './views/schedule/schedule.module#ScheduleModule'
+      },
+      {
+        path: 'contact',
+        loadChildren: './views/contact/contact.module#ContactModule'
       }
     ]
+  },
+  {
+    path: '**',
+    component: NotfoundLayoutComponent
   }
 ];
 

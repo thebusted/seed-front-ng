@@ -1,0 +1,11 @@
+.line {
+  background-repeat: no-repeat;
+  border: 0;
+  display: block;
+  height: 1px;
+  opacity: .5;
+  &.purple {
+    filter: alpha(opacity=50);
+    @include gradient(#343a40);
+  }
+}

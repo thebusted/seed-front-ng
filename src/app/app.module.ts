@@ -17,13 +17,15 @@ const APP_COMPONENTS = [FooterComponent, HeaderComponent];
 // Import 3rd party components
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { BannerComponent } from './components/banner/banner.component';
+import { NotfoundLayoutComponent } from './containers/notfound-layout/notfound-layout.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ...APP_CONTAINERS,
     ...APP_COMPONENTS,
-    BannerComponent
+    BannerComponent,
+    NotfoundLayoutComponent
   ],
   imports: [
     BrowserModule,

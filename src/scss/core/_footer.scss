@@ -1,6 +1,11 @@
 .footer {
+  background-color: $purple-900;
+  bottom: 0;
+  color: white;
   font-size: 0.7rem;
   font-weight: 200;
   height: $footer-height;
-  line-height: $footer-height; 
+  line-height: $footer-height;
+  position: absolute;
+  width: 100%; 
 }
