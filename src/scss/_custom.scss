@@ -1,3 +1,14 @@
 .material-icons {
   vertical-align: middle;
 }
+.gmap {
+  min-height: calc(100vh - #{$navbar-height} - #{$footer-height} - 77px);
+  position: relative;
+  iframe {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}

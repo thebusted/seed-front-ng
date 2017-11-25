@@ -21,6 +21,10 @@ const routes: Routes = [
         loadChildren: './views/schedule/schedule.module#ScheduleModule'
       },
       {
+        path: 'topics',
+        loadChildren: './views/topics/topics.module#TopicsModule'
+      },
+      {
         path: 'contact',
         loadChildren: './views/contact/contact.module#ContactModule'
       }
